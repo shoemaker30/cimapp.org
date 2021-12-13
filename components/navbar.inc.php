@@ -28,13 +28,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" id="home" href="#">Home</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" href="about">Link</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -44,14 +44,14 @@
             </div>
         </div>
     </nav>
-    <main class="container">
-        <div class="bg-light p-5 rounded">
-            <h1>Navbar example</h1>
-            <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll,
-                it will remain fixed to the top of your browser’s viewport.</p>
-            <a class="btn btn-lg btn-primary" role="button">View navbar docs &raquo;</a>
-        </div>
-    </main>
     <script src="./bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to set the selected page in the navbar. This function should be called by every page that includes this navbar. 
+        function setActivePage(activePageName){
+            document.getElementById(activePageName).className += " active";
+            console.log("called");
+        }
+    </script>
+
 </body>
 </html>
