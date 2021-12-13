@@ -19,8 +19,9 @@
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
             <h1 class="display-4 fw-normal">Voice Your Concerns</h1>
-            <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this
-                example based on Apple’s marketing pages.</p>
+            <p class="lead fw-normal">CIMA makes it easier than ever for you to inform your 
+                city about issues with public infrastructure. In less than a minute you can 
+                report about any issue that needs addressed.</p>
             <a class="btn btn-outline-secondary" href="#">App Store</a>
             <a class="btn btn-outline-secondary" href="#">Google Play</a>
         </div>
