@@ -2,7 +2,7 @@
 //database information
 $host = "localhost";
 $dbUsername = "CIMAdb_PublicUser";
-$dbPassword = "u3DRwAm3dHs7n90reoqz";
+$dbPassword = "";
 $dbName = "CIMAdb";
 // Create connection
 $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
