@@ -1,4 +1,47 @@
 <?php
+    session_start();
+
+    if (isset($_POST['signin_username']) && isset($_POST['signin_password'])){
+
+        include '../dbConfig.inc.php';
+
+        $username = $_POST['signin_username'];
+        $password = $_POST['signin_password'];
+
+        //get the role of the user. If user is not in database, then the role is empty set
+        $result = $conn->query("CALL CIMAdb_LogIn('$username','$username','$password');");
+        $row = $result->fetch_assoc();
+
+        // set session as user role and redirect
+        if ($row['RoleName'] == "administrator"){
+            session_destroy();
+            session_start();
+            session_unset();
+            $_SESSION["loggedAs"] = "administrator";
+            header("Location:../supervisor-dashboard");
+            die();
+        }
+        else if ($row['RoleName'] == "supervisor"){
+            session_destroy();
+            session_start();
+            session_unset();
+            $_SESSION["loggedAs"] = "supervisor";
+            header("Location:../supervisor-dashboard");
+            die();
+        }
+        else if ($row['RoleName'] == "reporter"){
+            session_destroy();
+            session_start();
+            session_unset();
+            $_SESSION["loggedAs"] = "reporter";
+            header("Location:../reporter-dashboard");
+            die();
+        }
+        else{  // if user not in database
+            header("Location:./sign-in.php?invalid=true");
+            die();
+        }
+    }
     // 'invalid' is added to the url when the user tries to log in with invalid credentials
     // the point of this variable is to change the styling to red and display an error
     $invalid = null;
@@ -15,11 +58,11 @@
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles -->
-    <link href="./sign-in.css" rel="stylesheet">
+    <link href="./account.css" rel="stylesheet">
 </head>
 <body class="text-center">
     <main class="form-signin">
-        <form action="verify-sign-in-attempt.php" method="post">
+        <form action="sign-in.php" method="post">
             <h1 class="h3 mb-3 fw-normal">Welcome back to CIMA!</h1>
             <h2 class="h4 mb-3 fw-normal">Sign-In below.</h2>
             <p>New User? Create an account <a href="./create-account.php">here</a>.</p>
@@ -36,7 +79,7 @@
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="signin_password" maxlength="50" required>
                 <label for="floatingPassword">Password</label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
             <script>
             function displayError(){
                 let text_inputs = document.getElementsByClassName("form-control");
@@ -49,10 +92,8 @@
                 if($invalid != null){
                     echo('<script>displayError();</script>');
                 }
-                
             ?>
         </form>
-
     </main>
 </body>
 </html>
