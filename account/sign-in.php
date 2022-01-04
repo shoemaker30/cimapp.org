@@ -13,28 +13,13 @@
         $row = $result->fetch_assoc();
 
         // set session as user role and redirect
-        if ($row['RoleName'] == "administrator"){
+        if ($row['RoleName'] == "administrator" || $row['RoleName'] == "supervisor" || $row['RoleName'] == "reporter"){
             session_destroy();
             session_start();
             session_unset();
-            $_SESSION["loggedAs"] = "administrator";
-            header("Location:../supervisor-dashboard");
-            die();
-        }
-        else if ($row['RoleName'] == "supervisor"){
-            session_destroy();
-            session_start();
-            session_unset();
-            $_SESSION["loggedAs"] = "supervisor";
-            header("Location:../supervisor-dashboard");
-            die();
-        }
-        else if ($row['RoleName'] == "reporter"){
-            session_destroy();
-            session_start();
-            session_unset();
-            $_SESSION["loggedAs"] = "reporter";
-            header("Location:../reporter-dashboard");
+            $_SESSION["CurrentUser_Role"] = "administrator";
+            $_SESSION["CurrentUser_Username"] = $row['Username'];
+            header("Location:../dashboard/my-account.php");
             die();
         }
         else{  // if user not in database
@@ -79,7 +64,7 @@
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="signin_password" maxlength="50" required>
                 <label for="floatingPassword">Password</label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign In</button>
             <script>
             function displayError(){
                 let text_inputs = document.getElementsByClassName("form-control");

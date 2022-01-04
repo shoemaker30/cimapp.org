@@ -1,0 +1,56 @@
+id,safety_hazard,classification,latitude,longitude,description
+1,Y,Sidewalk,38.42329977,-82.42847793,0.02 inches
+2,Y,Sidewalk,38.42331448,-82.42847024,Faulty joint from improper sawing
+3,Y,Sign/Signal,38.42375655,-82.42857983,Rates higher due to it being an emergency beacon.
+4,N,Sign/Signal,38.42389314,-82.42872497, building lettering are discolored.
+5,N,Sign/Signal,38.42383562,-82.42817772,Good condition.
+6,N,Building,38.42337752,-82.42784754,Need a buskirk building sign added to backside and cleaned up
+7,N,Sign/Signal,38.42337201,-82.42782944,Sign is dirty and starting to rust due to paint missing.
+8,Y,Sign/Signal,38.4237165,-82.42862029,Emergency post. Needs new paintalso new glass installed due to moisture as well as new emergency panel.
+9,N,Building,38.42388395,-82.42871974, Building sign needs cleaned on building.
+10,N,Sign/Signal,38.42370533,-82.4287356,Letters faded
+11,N,Sign/Signal,38.42378387,-82.42859917,Fading on emergency words but otherwise good condition
+12,N,Sign/Signal,,,There is no issue. This this is the Marshall University Building.
+13,N,Parking Lot,38.42512573,-82.43045241,Alligator
+14,N,Parking Lot,38.42517596,-82.43072056,Linear and alligator cracking
+15,N,Sign/Signal,,,There is no issue. This this is the Marshall University Building.
+16,N,Other,38.42375902,-82.4239397,One more test since last one did not work
+17,N,Parking Lot,38.42551667,-82.43023518,Traverse Crack with a linear approximate distance of 7.09 ft and approximate width of 0.04 ft.
+18,N,Parking Lot,38.42730126,-82.42114818,Section of block cracking detailing an approximate area of 21.23 ft x 8.27 ft
+19,N,Sidewalk,38.42337752,-82.42708065,Linear Cracking all the way across the 8 ft wide sidewalk
+20,N,Sidewalk,38.4236267,-82.42717453,
+21,N,Sidewalk,38.42394278,-82.42647216,By the handicap ramp outside of the Into Center
+22,N,Sidewalk,38.4236507,-82.42718542,0.6 in drop
+23,N,Sidewalk,38.42405826,-82.42654159,Outside the handicap ramp by the Into Center
+24,N,Sidewalk,38.42320951,-82.42630849,No distresses present. This location is located west of the tennis courts.
+25,N,Sidewalk,38.42369057,-82.42683917,Multiple cracks on side slab
+26,N,Sidewalk,38.42368356,-82.42675066,A extensive linear cracking on main slab
+27,N,Sidewalk,38.42419274,-82.42650977,By the reserved for handicap parking sign outside the Into Center
+28,N,Sidewalk,38.42405205,-82.4264959,Also beside the handicapped parking sign by the Into Center
+29,N,Sign/Signal,38.42372362,-82.42725003,Vegetation obstruction
+30,N,Sidewalk,38.4236659,-82.42684186,Significant faulting between both tapered slabs and main sidewalk.
+31,N,Sidewalk,38.42370808,-82.42675513,Faulting at CJ on main sidewalk
+32,N,Sidewalk,38.42401623,-82.42653647,This pothole is beside the ramp and door leading into the Into Center facing Gullickson building
+33,N,Sidewalk,38.42401623,-82.42653647,This pothole is beside the ramp and door leading into the Into Center facing Gullickson building
+34,N,Sidewalk,38.42401623,-82.42653647,This pothole is beside the ramp and door leading into the Into Center facing Gullickson building
+35,N,Sign/Signal,38.42306662,-82.42629227,Location is west of tennis courts. No problems
+36,N,Sidewalk,38.42394479,-82.42646771,A fault by the Reserved Into Parking Access sign
+37,N,Sign/Signal,38.42368967,-82.42671363,Location is in front of east building. Visibility is slightly obstructed.
+38,N,Sign/Signal,38.42306642,-82.42605261, 
+39,N,Sign/Signal,38.42338498,-82.42724717,Location is south of Prichard building. Visibility is obstructed by a tree and bushes.
+40,N,Sign/Signal,38.42402884,-82.42654184,Poor condition and the sign is slightly warped and turned away from the road outside the Into Center
+41,N,Sign/Signal,38.4237275,-82.42723709,Located east of Prichard building. Visibility obstructed by tree.
+42,N,Sign/Signal,38.42390916,-82.42639635,The letters are faded pretty severely on these signs.
+43,N,Sign/Signal,38.42373623,-82.42638116,Very loose bolts.  hard to read in windy weather due to the moving left and right of the sign. Slightly faded.
+44,N,Parking Lot,38.42524517,-82.43064236,North west part of the parking lot behind. Visibility of line is faded.
+45,N,Parking Lot,38.42522639,-82.43037926,Fatigue cracking
+46,N,Parking Lot,38.42520558,-82.4298039,A pretty large section of alligator cracking in the middle of the WAEC parking lot
+47,N,Sidewalk,38.4233355,-82.42682835,About 0.5x0.43ft
+48,Y,Roadway/Parking Lot,,,The potholes on 5th ave are insane.
+49,N,Parking Lot,,,Linear Cracking in parking lot behind WAEC. I cannot get the location to work on my computer.
+50,N,Parking Lot,,,Alligator Cracking in the parking lot behind WAEC
+51,N,Sign/Signal,,,Lettering on sign is slightly faded
+52,N,Sign/Signal,,,Seems to be in good condition
+53,N,Sign/Signal,,,Sign  is damaged from being hit by a car it seems
+54,N,Sign/Signal,,,This sign is in perfect condition. Emergency sign by Holderby building and the Tennis Courts.
+55,N,Sign/Signal,,,Bush in the way of prichard building sign

@@ -92,11 +92,11 @@ The working directory is */var/www/cimapp.org*, and it is a cloned repository of
 #### Connecting to database from on cimapp.org
 All visitors to cimapp.org are accessing the database through the public MySQL account *CIMAdb_PublicUser*. This user has the *EXECUTE* priviledge, so all data querying takes place through stored procedures. 
 
-##### Creation of CIMAdb_PublicUser
-'''
-CREATE USER 'CIMAdb_PublicUser'@'localhost' IDENTIFIED BY '*(Get this password from the developer)*';
+Creation of CIMAdb_PublicUser:
+```
+CREATE USER 'CIMAdb_PublicUser'@'localhost' IDENTIFIED BY '(Get this password from the developer)';
 GRANT EXECUTE ON CIMAdb.* TO 'CIMAdb_PublicUser'@'localhost';
-'''
+```
 
 #### User Roles
 1. **Administrator:** has all priviledges; given to web developers 

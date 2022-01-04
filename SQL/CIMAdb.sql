@@ -1,9 +1,10 @@
 /*CIMA Database v2.1*/
 /*Author: Eric Shoemaker (github:shoemaker30)*/
 /*Modified 11/13/2021*/
-/*For use with MySQL on a LAMP stack*/
+/*For use with MySQL Database Systems*/
 
 /** Create the database */
+DROP DATABASE CIMAdb;
 CREATE DATABASE CIMAdb;
 USE CIMAdb;
 CREATE TABLE Municipality(
@@ -31,15 +32,26 @@ CREATE TABLE User(
     FOREIGN KEY (MunicipalityId) REFERENCES Municipality(Id),
     FOREIGN KEY (UserRole) REFERENCES UserRole(Id)
 );
+CREATE TABLE InfrastructureType(
+	Id int auto_increment,
+    Type varchar(20),
+    PRIMARY KEY (Id)
+);
 CREATE TABLE InfrastructureObject(
 	Id int auto_increment,
     MuncipalityId int,
-	ObjectType varchar(20),
+	InfrastructureTypeId int,
 	CurrentStatus varchar(20),
 	Latitude decimal(15,10),
 	Longitude decimal(15,10),
     PRIMARY KEY (Id),
-    FOREIGN KEY (MuncipalityId) REFERENCES Municipality(Id)
+    FOREIGN KEY (MuncipalityId) REFERENCES Municipality(Id),
+    FOREIGN KEY (InfrastructureTypeId) REFERENCES InfrastructureType(Id)
+);
+CREATE TABLE Issue(
+	Id int auto_increment,
+    Description varchar(100),
+    PRIMARY KEY (Id)
 );
 CREATE TABLE ActiveDamageReport(
 	Id int auto_increment,
@@ -54,7 +66,7 @@ CREATE TABLE ActiveDamageReport(
 	SpecificIssues varchar(300),
 	IssueDescription varchar(300),
 	Severity tinyint,
-	PathToImage varchar(200),
+	ImageName varchar(200),
     PRIMARY KEY (Id),
     FOREIGN KEY (ObjectId) REFERENCES InfrastructureObject(Id),
     FOREIGN KEY (UserId) REFERENCES User(Id)
@@ -72,7 +84,7 @@ CREATE TABLE PastDamageReport(
 	SpecificIssues varchar(300),
 	IssueDescription varchar(300),
 	Severity tinyint,
-	PathToImage varchar(200),
+	ImageName varchar(200),
     PRIMARY KEY (Id),
     FOREIGN KEY (ObjectId) REFERENCES InfrastructureObject(Id),
     FOREIGN KEY (UserId) REFERENCES User(Id)

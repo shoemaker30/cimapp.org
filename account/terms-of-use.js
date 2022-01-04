@@ -1,0 +1,6 @@
+function showTermsOfUse(){
+
+}
+function hideTermsOfUse(){
+    
+}
